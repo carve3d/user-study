@@ -1,0 +1,115 @@
+<html>
+    <head>
+    <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+    .column { float: left; width: 50%; box-sizing: border-box; padding: 10px; }
+    .row:after { content: ""; display: table; clear: both; }
+    img { 
+        width: 100%; 
+        height: auto; 
+        max-height: 60vh; /* Adjust this value to fit your content within the viewport */
+        object-fit: contain; /* This will cause the image/video to cover the area, and it will be clipped if necessary */
+    }
+    video { 
+        width: 100%; 
+        height: auto; 
+        max-height: 30vh; /* Adjust this value to fit your content within the viewport */
+        object-fit: contain; /* This will cause the image/video to cover the area, and it will be clipped if necessary */
+    }
+    .text-prompt { font-size: 20px; text-align: center; margin: 20px 0; width: 100%; }
+    .image-name, .video-name { text-align: center; font-weight: bold; padding: 10px; }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .centered-container { 
+      display: flex; 
+      justify-content: center; /* This will center the child div */
+      width: 100%; 
+    }
+    .instructions { 
+      text-align: left; /* Left-align the text within the centered div */
+      max-width: 66.6666%; /* Two-thirds of the container's width */
+      padding: 20px; /* Add some padding around the text */
+      box-sizing: border-box;
+    }
+    .instructions p { 
+      margin-top: 1em; /* Adds space above each paragraph */
+      margin-bottom: 1em; /* Adds space below each paragraph */
+    }
+    .instructions ol { 
+      padding-left: 20px; /* This gives some space inside the list for the numbers */
+      margin-top: 1em; /* Adds space above the list */
+      margin-bottom: 1em; /* Adds space below the list */
+    }
+
+    .instructions li { 
+      margin-bottom: 0.5em; /* Adds some space between list items */
+    }
+    h1 { 
+      margin-top: 20px; /* Adjust as needed */
+    }
+    .link-container { 
+      display: block;
+      margin: 20px auto;
+    }
+    </style>
+    </head>
+    <body>
+    
+                <div class="container">
+                    <div class="flex-container">
+                        <div class="text-prompt">Prompt 20: a cup full of pens and pencils</div>
+                <a href="obj_19.html" class="next-link">Back</a> <a href="finished.html" class="next-link">Next</a> <a href="index.html" class="next-link">Show Instructions</a>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <video loop autoplay muted style="width:100%; height:auto;">
+                                    <source src="0/238/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <img src="0/238/tiled_pred.png" alt="Before Image" style="width:100%; height:auto;">
+                            </div>
+                            <div class="column">
+                                <video loop autoplay muted style="width:100%; height:auto;">
+                                    <source src="55/238/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <img src="55/238/tiled_pred.png" alt="After Image" style="width:100%; height:auto;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="centered-container">
+                    <div class="instructions">
+                        <p> 
+                        Please use both the image and the video results and answer the following questions:
+                        </p>
+                        
+                        <ol>
+                            <li>Which result is more <b>3D-Consistent</b>? Please answer Left (L) or Right (R).</li>
+                            <li>Which result is better <b>aligned</b> with the prompt? Please answer Left (L), Right (R), or Same (S).</li>
+                        </ol>
+                        
+                        <p>
+                        Definition of 3D-Consistency: the object should look the same from all four views, and the 3D model should be free of <b>floater artifacts</b> or <b>stretched shapes</b>. 
+                        The colorless mesh helps you better see the shape of the 3D model.
+                        However, sometimes there could be problems with the mesh, e.g. it would be empty or it would generate a ground plane. 
+                        In these cases, please ignore the colorless mesh and only use the image and the colored 3D model in the video to judge 3D-Consistency.
+                        </p>
+                        <p>
+                        Definition of Prompt Alignment: the object should look like the prompt.
+                        </p>
+                        
+                        <p>
+                        Please record your answers using the abbreviations, e.g. "1LL, 2LL, 3LL, 4LL, 5LL, 6LL, 7LL, 8LL, 9LL, 10LL, 11LL, 12LL, 13LL, 14LL, 15LL, 16LL, 17LL, 18LL, 19LL, 20LL". 
+                        </p>
+                    </div>
+                </div>
+                
+    </body>
+    </html>
+    
